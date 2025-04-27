@@ -1,0 +1,54 @@
+/* Encabezado con línea y margen */
+.header h1 {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+  /* Línea bajo el título */
+  .header hr {
+    width: 4rem;
+    margin: .5rem auto 1rem;
+    border-top: 3px solid #343a40;
+  }
+  
+  /* Imagen responsiva con altura fija y recorte */
+  .header-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: .25rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Encabezados de tabla oscuros */
+  .table thead {
+    background-color: #343a40;
+    color: #fff;
+  }
+  
+  /* Hover suave sobre filas */
+  .table tbody tr:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+  
+  /* Celdas centradas verticalmente */
+  .table td,
+  .table th {
+    vertical-align: middle;
+  }
+  
+  /* Pie de página más discreto */
+  footer.small {
+    font-size: .875rem;
+    color: #666;
+  }
+
+  .header h1, 
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;           /* ajustable a tu gusto */
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.5px;     /* da un poquito de aire */
+    font-weight: 400;
+    color: #333;               /* asegúrate de un gris oscuro */
+  }

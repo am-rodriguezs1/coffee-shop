@@ -1,0 +1,35 @@
+<div class="container mt-4 text-start">
+  <h1 class="mb-3">El aroma mágico</h1>
+  <hr class="mb-4" />
+  <img src="../../assets/images/header-coffee.png" alt="Coffee header" class="img-fluid rounded mb-4" />
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered align-middle w-auto">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Región</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let coffee of coffees; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ coffee.name }}</td>
+          <td>{{ coffee.type }}</td>
+          <td>{{ coffee.region }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mt-2">
+    <p>Total café de origen: {{ originCount }}</p>
+    <p>Total café blend: {{ blendCount }}</p>
+  </div>
+  
+
+  <footer class="text-center mt-5 small text-muted">
+    Contact us: +57 3102105253 — {{ 'info@elaromamagico.com —  @elaromamagico' }}
+  </footer>
+</div>

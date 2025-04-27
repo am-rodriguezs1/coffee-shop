@@ -41,4 +41,14 @@
     font-size: .875rem;
     color: #666;
   }
-  
+
+  .header h1, 
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;           /* ajustable a tu gusto */
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.5px;     /* da un poquito de aire */
+    font-weight: 400;
+    color: #333;               /* asegúrate de un gris oscuro */
+  }

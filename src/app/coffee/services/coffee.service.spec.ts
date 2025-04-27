@@ -45,18 +45,28 @@ describe('CoffeeService', () => {
         sabor: 'Sabor 2',
         altura: 1200,
         imagen: 'imagen2.jpg'
+      },
+      {
+        id: 3,
+        nombre: 'Coffee 3',
+        tipo: 'Tipo 3',
+        region: 'Región 3',
+        sabor: 'Sabor 3',
+        altura: 1200,
+        imagen: 'imagen3.jpg'
       }
     ];
 
     service.getCoffees().subscribe(coffees => {
-      expect(coffees.length).toBe(2);
+      expect(coffees.length).toBe(3);
       expect(coffees[0]).toEqual(jasmine.any(Coffee));
       expect(coffees[0].name).toBe('Coffee 1');
       expect(coffees[1].region).toBe('Región 2');
+      expect(coffees[2].region).toBe('Región 3');
     });
 
     const req = httpMock.expectOne(service['apiUrl']);
     expect(req.request.method).toBe('GET');
-    req.flush(mockResponse); // Respondemos a la petición con los datos mockeados
+    req.flush(mockResponse); 
   });
 });

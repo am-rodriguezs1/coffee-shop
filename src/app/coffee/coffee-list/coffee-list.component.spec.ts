@@ -10,7 +10,6 @@ describe('CoffeeListComponent', () => {
   let mockCoffeeService: jasmine.SpyObj<CoffeeService>;
 
   beforeEach(async () => {
-    // Creamos un mock del servicio
     const coffeeServiceSpy = jasmine.createSpyObj('CoffeeService', ['getCoffees']);
 
     await TestBed.configureTestingModule({
@@ -32,17 +31,15 @@ describe('CoffeeListComponent', () => {
   it('should load coffees on init', () => {
     const mockCoffees: Coffee[] = [
       new Coffee(1, 'Coffee 1', 'Tipo 1', 'Región 1', 'Sabor 1', 1000, 'imagen1.jpg'),
-      new Coffee(2, 'Coffee 2', 'Tipo 2', 'Región 2', 'Sabor 2', 1200, 'imagen2.jpg')
+      new Coffee(2, 'Coffee 2', 'Tipo 2', 'Región 2', 'Sabor 2', 1200, 'imagen2.jpg'),
+      new Coffee(3, 'Coffee 3', 'Tipo 3', 'Región 3', 'Sabor 3', 1200, 'imagen3.jpg')
     ];
 
-    // Hacemos que el servicio retorne nuestro mock
     mockCoffeeService.getCoffees.and.returnValue(of(mockCoffees));
 
-    // Disparamos el ngOnInit
     fixture.detectChanges();
 
-    // Verificamos que se asignaron los cafés
-    expect(component.coffees.length).toBe(2);
+    expect(component.coffees.length).toBe(3);
     expect(component.coffees).toEqual(mockCoffees);
     expect(mockCoffeeService.getCoffees).toHaveBeenCalled();
   });
